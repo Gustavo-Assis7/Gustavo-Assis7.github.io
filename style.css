@@ -1,0 +1,60 @@
+/* --- Reset Básico e Estilos Globais --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; /* Remove a margem padrão do navegador */
+    padding: 0; /* Remove o preenchimento padrão */
+    background-color: #f4f4f9; /* Um fundo cinza ainda mais sutil */
+    color: #333;
+    display: flex; /* ATIVA O FLEXBOX! */
+    flex-direction: column; /* Organiza os elementos filhos (header, main, footer) em uma coluna */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da tela */
+}
+
+/* --- Estilos do Cabeçalho --- */
+header {
+    background-color: #ffffff; /* Fundo branco para o cabeçalho */
+    padding: 20px 40px; /* Mais preenchimento vertical e horizontal */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Uma sombra sutil para dar elevação */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #0056b3;
+    font-size: 2.5em; /* Aumenta o tamanho do nome */
+}
+
+/* --- Estilos da Navegação / Menu --- */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    margin: 0 15px; /* Espaçamento entre os links do menu */
+    color: #0056b3;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Adiciona o sublinhado de volta quando o mouse passa por cima */
+}
+
+/* --- Estilos do Conteúdo Principal --- */
+main {
+    flex: 1; /* Faz o main crescer e ocupar todo o espaço disponível, empurrando o footer para baixo */
+    padding: 40px;
+    max-width: 900px; /* Define uma largura máxima para o conteúdo não ficar esticado demais em telas grandes */
+    margin: 20px auto; /* Centraliza o main na página */
+    width: 100%;
+}
+
+/* --- Estilos do Rodapé --- */
+footer {
+    background-color: #333; /* Rodapé escuro para contraste */
+    color: #fff; /* Texto branco */
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+}
