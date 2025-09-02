@@ -3,14 +3,25 @@
     box-sizing: border-box;
 }
 
+/* --- Variáveis de Cores (Deep Space Blue Theme) --- */
+:root {
+    --cor-fundo-principal: #0a192f;        /* Azul marinho muito escuro, quase preto */
+    --cor-fundo-secundario: #112240;       /* Um tom de azul marinho um pouco mais claro para cards/seções */
+    --cor-texto-principal: #ccd6f6;        /* Branco acinzentado para textos */
+    --cor-texto-secundario: #8892b0;       /* Cinza mais escuro para parágrafos */
+    --cor-destaque: #64ffda;              /* Verde menta/ciano vibrante para links/botões/bordas */
+    --cor-header-footer: #0a192f;         /* Mesma cor do fundo principal para header e footer */
+    --cor-sombra: rgba(2, 12, 27, 0.7);    /* Sombra mais escura */
+}
+
 /* O resto do seu código vem depois... */
 /* --- Reset Básico e Estilos Globais --- */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--cor-fundo-principal); /* APLICADO */
+    color: var(--cor-texto-secundario); /* APLICADO */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -18,15 +29,15 @@ body {
 
 /* --- Estilos do Cabeçalho --- */
 header {
-    background-color: #ffffff;
+    background-color: var(--cor-header-footer); /* APLICADO */
     padding: 20px 40px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--cor-sombra); /* APLICADO */
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    color: #0056b3;
+    color: var(--cor-texto-principal); /* APLICADO */
     font-size: 2.5em;
 }
 
@@ -37,20 +48,27 @@ nav {
 
 nav a {
     margin: 0 15px;
-    color: #0056b3;
+    color: var(--cor-texto-secundario); /* APLICADO */
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
+    transition: color 0.3s ease; /* Adicionando transição suave */
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: var(--cor-destaque); /* APLICADO */
+    text-decoration: none; /* Removido sublinhado para um look mais limpo */
 }
 
 nav a.active {
-    color: #002b5c;
-    border-bottom: 2px solid #0056b3;
+    color: var(--cor-destaque); /* APLICADO */
+    border-bottom: 2px solid var(--cor-destaque); /* APLICADO */
     padding-bottom: 2px;
+}
+
+/* --- Estilos de Títulos --- */
+h2, h3 {
+    color: var(--cor-texto-principal); /* APLICADO */
 }
 
 /* --- Estilos do Conteúdo Principal --- */
@@ -64,34 +82,20 @@ main {
 
 /* --- Estilos do Rodapé --- */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--cor-header-footer); /* APLICADO */
+    color: var(--cor-texto-secundario); /* APLICADO */
     text-align: center;
     padding: 20px;
     width: 100%;
+    box-shadow: 0 -2px 4px var(--cor-sombra); /* Sombra no topo do footer */
 }
 
-/* --- Estilos da Seção de Projetos --- */
-#projetos {
-    padding-top: 40px;
-    text-align: center;
-}
-
-.cards-de-projetos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.card {
-    background-color: #ffffff;
+/* --- Estilos da Seção de Projetos (Cards) --- */
+.card, .pagina-de-projeto {
+    background-color: var(--cor-fundo-secundario); /* APLICADO */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px var(--cor-sombra); /* APLICADO */
     padding: 25px;
-    width: 350px;
-    text-align: left;
     transition: transform 0.3s ease;
 }
 
@@ -101,37 +105,33 @@ footer {
 
 .card h3 {
     margin-top: 0;
-    color: #0056b3;
+    color: var(--cor-texto-principal); /* APLICADO */
 }
 
-.card a {
+/* --- Estilos de Botões e Links de Ação --- */
+.card a, .botao-contato {
     display: inline-block;
     margin-top: 15px;
-    background-color: #0056b3;
-    color: #ffffff;
+    background-color: transparent; /* Fundo transparente */
+    color: var(--cor-destaque); /* APLICADO */
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    border: 1px solid var(--cor-destaque); /* Borda na cor de destaque */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.card a:hover {
-    background-color: #004494;
+.card a:hover, .botao-contato:hover {
+    background-color: var(--cor-destaque); /* Preenche no hover */
+    color: var(--cor-fundo-principal); /* Texto escuro no hover */
 }
 
 /* --- Estilos da Página de Projeto Detalhada --- */
-.pagina-de-projeto {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: left;
-}
-
 .pagina-de-projeto h3 {
     margin-top: 30px;
-    color: #004494;
-    border-bottom: 2px solid #f0f2f5;
+    color: var(--cor-texto-principal);
+    border-bottom: 2px solid var(--cor-fundo-principal); /* APLICADO */
     padding-bottom: 5px;
 }
 
@@ -141,39 +141,20 @@ footer {
 }
 
 .pagina-de-projeto li {
-    background-color: #f0f2f5;
+    background-color: var(--cor-fundo-principal); /* APLICADO */
     margin-bottom: 8px;
     padding: 10px;
     border-radius: 5px;
 }
 
 .pagina-de-projeto li strong {
-    color: #0056b3;
+    color: var(--cor-destaque); /* APLICADO */
 }
 
 /* --- Estilos da Página de Contato --- */
 .links-contato {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center; /* Adicione esta linha */
-}
-
-.botao-contato {
-    display: inline-block;
-    background-color: #0056b3;
-    color: #ffffff;
-    padding: 15px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.botao-contato:hover {
-    background-color: #004494;
-    color: #ffffff;
+    margin-top: 30px;
+    text-align: center;
 }
 
 /* --- Estilos da Página Sobre Mim com Foto --- */
@@ -190,8 +171,8 @@ footer {
 .coluna-imagem img {
     width: 100%;
     border-radius: 50%;
-    border: 5px solid #ffffff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border: 5px solid var(--cor-fundo-secundario); /* APLICADO */
+    box-shadow: 0 4px 8px var(--cor-sombra);
 }
 
 .coluna-texto {
@@ -205,7 +186,7 @@ footer {
 }
 
 .galeria-certificados h2 {
-    color: #0056b3;
+    color: var(--cor-texto-principal);
     margin-bottom: 30px;
 }
 
@@ -218,9 +199,9 @@ footer {
 }
 
 .item-galeria {
-    background-color: #ffffff;
+    background-color: var(--cor-fundo-secundario); /* APLICADO */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px var(--cor-sombra);
     padding: 15px;
     width: 300px;
     text-align: center;
@@ -244,9 +225,10 @@ footer {
 
 .item-galeria .legenda {
     font-size: 0.9em;
-    color: #555;
+    color: var(--cor-texto-secundario);
     margin-top: 10px;
 }
+
 /* --- Estilos para a Galeria de Rotina (Carrossel Swiper) --- */
 .galeria-rotina {
     padding-top: 40px;
@@ -255,14 +237,14 @@ footer {
 }
 
 .galeria-rotina h2 {
-    color: #0056b3;
+    color: var(--cor-texto-principal);
     margin-bottom: 30px;
 }
 
 .swiper {
     width: 100%;
     height: 100%;
-    position: relative; /* Esta linha é a correção para o posicionamento */
+    position: relative;
 }
 
 .swiper-slide {
@@ -280,42 +262,7 @@ footer {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #0056b3;
-}
-
-/* Garante que as imagens dentro do carrossel se ajustem */
-.swiper-slide img {
-    max-width: 100%; /* A imagem não vai passar da largura do slide */
-    height: 300px; /* Define uma altura fixa para as imagens */
-    object-fit: cover; /* Corta a imagem para preencher o espaço sem distorcer */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Estilos para as setas de navegação */
-.swiper-button-prev,
-.swiper-button-next {
-    color: #0056b3; /* Cor das setas */
-}
-
-/* Estilos para a paginação (os pontinhos embaixo) */
-.swiper-pagination-bullet-active {
-    background-color: #0056b3; /* Cor do pontinho ativo */
-}
-
-/* Ajustes para telas menores dentro da Media Query (já existe, mas vale a pena revisar) */
-@media (max-width: 768px) {
-    /* ... seu código de media query existente ... */
-
-    .swiper-slide img {
-        height: 200px; /* Reduz a altura das imagens do carrossel em mobile */
-    }
-
-    /* Oculta as setas de navegação em telas pequenas, se preferir */
-    .swiper-button-prev,
-    .swiper-button-next {
-        display: none;
-    }
+    background-color: var(--cor-destaque); /* APLICADO */
 }
 
 /* --- Media Query para Responsividade --- */
@@ -340,8 +287,10 @@ footer {
     }
     nav a.active {
         border-bottom: none;
-        color: #002b5c;
+        color: var(--cor-destaque); /* APLICADO */
         font-weight: bold;
+        background-color: rgba(100, 255, 218, 0.1); /* Fundo sutil para o item ativo no mobile */
+        border-radius: 4px;
     }
     main {
         padding: 15px;
@@ -387,14 +336,17 @@ footer {
         height: 150px;
     }
     .links-contato {
-        display: flex; /* Adicionado para permitir empilhamento */
+        display: flex;
         flex-direction: column;
         gap: 10px;
+        align-items: center;
     }
     .botao-contato {
         width: 100%;
         padding: 12px 20px;
         font-size: 0.9em;
     }
+    .swiper-slide img {
+        height: 200px;
+    }
 }
-
