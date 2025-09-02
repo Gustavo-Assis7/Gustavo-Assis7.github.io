@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Mim - Gustavo Assis</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
     <header>
@@ -43,26 +45,78 @@
         </div>
     </div>
 </section>
-<section class="galeria-certificados">
-            <h2>Certificados e Diplomas</h2>
-            <div class="galeria-grid">
-                
-                <div class="item-galeria">
-                    <img src="images/Certificado de conclusão Programa Oracle One.png" alt="Descrição do Certificado 1">
-                    <div class="legenda">Certificado de conclusão em Back-End</div>
-                </div>
-                <div class="item-galeria">
-                    <img src="images/Back-End Formado.png" alt="Descrição do Certificado 2">
-                    <div class="legenda">Formado em Dev Junior Back-End</div>
-                </div>
-                
-                </div>
-        </section>
+
+<section class="galeria-rotina">
+    <h2>Um Pouco da Minha Rotina</h2>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/imagem-1.JPEG" alt="O início de tudo, começando a programar">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/imagem-2.JPEG" alt="Curso de Inteligência Artificial Generativa">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/imagem-3.JPEG" alt="Ainda sobre o Curso">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/imagem-4.JPEG" alt="A pausa para um café é essencial para um programador">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/imagem-5.JPEG" alt="Retomando os estudos">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/imagem-7.JPEG" alt="Curso de 08 horas finalizado com sucesso">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
     </main>
 
     <footer>
         <p>&copy; 2025 Gustavo Henrique Assis. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+    // Parâmetros principais
+    loop: true, // Garante o loop infinito
+    centeredSlides: true,
+
+    // AUTOPLAY! (3000ms = 3 segundos)
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false, // Continua o autoplay mesmo depois que o usuário interage
+    },
+
+    // Paginação (os pontinhos)
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    
+    // Configuração de quantos slides aparecem por tela
+    breakpoints: {
+      // Em telas de celular, mostra 1 slide
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      // Em telas de tablet (>= 768px), mostra 2 slides
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      // Em telas de desktop (>= 1024px), mostra 3 slides
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50
+      }
+    }
+  });
+</script>
 </body>
 </html>

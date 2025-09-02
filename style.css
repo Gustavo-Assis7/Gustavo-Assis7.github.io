@@ -247,6 +247,76 @@ footer {
     color: #555;
     margin-top: 10px;
 }
+/* --- Estilos para a Galeria de Rotina (Carrossel Swiper) --- */
+.galeria-rotina {
+    padding-top: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.galeria-rotina h2 {
+    color: #0056b3;
+    margin-bottom: 30px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Esta linha é a correção para o posicionamento */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #0056b3;
+}
+
+/* Garante que as imagens dentro do carrossel se ajustem */
+.swiper-slide img {
+    max-width: 100%; /* A imagem não vai passar da largura do slide */
+    height: 300px; /* Define uma altura fixa para as imagens */
+    object-fit: cover; /* Corta a imagem para preencher o espaço sem distorcer */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estilos para as setas de navegação */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #0056b3; /* Cor das setas */
+}
+
+/* Estilos para a paginação (os pontinhos embaixo) */
+.swiper-pagination-bullet-active {
+    background-color: #0056b3; /* Cor do pontinho ativo */
+}
+
+/* Ajustes para telas menores dentro da Media Query (já existe, mas vale a pena revisar) */
+@media (max-width: 768px) {
+    /* ... seu código de media query existente ... */
+
+    .swiper-slide img {
+        height: 200px; /* Reduz a altura das imagens do carrossel em mobile */
+    }
+
+    /* Oculta as setas de navegação em telas pequenas, se preferir */
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+}
 
 /* --- Media Query para Responsividade --- */
 @media (max-width: 768px) {
