@@ -28,10 +28,26 @@ header h1 {
 nav {
     margin-top: 15px;
 }
+
+/* REGRA PARA TODOS OS LINKS NORMAIS */
+nav a {
+    margin: 0 15px;
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* REGRA PARA QUANDO O MOUSE PASSA POR CIMA */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* REGRA APENAS PARA O LINK COM A CLASSE "ACTIVE" */
 nav a.active {
-    color: #002b5c; /* Um azul mais escuro e forte */
-    border-bottom: 2px solid #0056b3; /* Uma linha sutil embaixo */
-    padding-bottom: 2px; /* Um pequeno espaço para a linha não colar no texto */
+    color: #002b5c;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 2px;
 }
 
 nav a {
