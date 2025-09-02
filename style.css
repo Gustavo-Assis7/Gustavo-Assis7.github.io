@@ -252,22 +252,50 @@ footer {
 }
 
 /* --- Media Query para Responsividade --- */
-/* Estas regras SÓ serão aplicadas em telas com 768px de largura ou menos */
-
 @media (max-width: 768px) {
-    
-    /* Ajusta o cabeçalho para telas menores */
+
+    /* Ajustes Globais para Mobile */
+    body {
+        font-size: 0.9em; /* Diminui um pouco o tamanho base da fonte */
+    }
+
     header {
         padding: 15px 20px;
     }
 
     header h1 {
-        font-size: 2em; /* Diminui o título principal */
+        font-size: 1.8em; /* Diminui ainda mais o título principal para caber */
+    }
+
+    nav {
+        flex-direction: column; /* Empilha os links do menu para vertical */
+        margin-top: 10px;
     }
 
     nav a {
-        margin: 0 8px; /* Diminui o espaço entre os links do menu */
-        font-size: 1em;
+        margin: 5px 0; /* Espaçamento vertical entre os links */
+        font-size: 0.9em;
+        display: block; /* Cada link ocupa sua própria linha */
+    }
+
+    nav a.active {
+        border-bottom: none; /* Remove a linha de baixo para não poluir o menu empilhado */
+        color: #002b5c;
+        font-weight: bold;
+    }
+
+    /* Ajusta o padding geral do conteúdo */
+    main {
+        padding: 15px; /* Reduz o padding geral do conteúdo */
+        margin: 10px auto; /* Reduz a margem superior/inferior */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Ajusta o tamanho dos títulos H2 */
+    }
+
+    h3 {
+        font-size: 1.2em; /* Ajusta o tamanho dos títulos H3 */
     }
 
     /* Empilha a foto e o texto na página "Sobre Mim" */
@@ -283,12 +311,46 @@ footer {
 
     .coluna-imagem {
         margin-bottom: 20px; /* Adiciona um espaço abaixo da foto */
-        max-width: 200px; /* Limita o tamanho máximo da foto */
+        max-width: 150px; /* Limita o tamanho máximo da foto para celular */
     }
 
-    /* Ajusta o padding geral do conteúdo */
-    main {
-        padding: 20px;
+    /* Ajusta os cards de projeto */
+    .cards-de-projetos {
+        flex-direction: column; /* Empilha os cards de projeto */
+        gap: 20px; /* Reduz o espaço entre eles */
+    }
+
+    .card {
+        width: 100%; /* Faz o card ocupar 100% da largura disponível */
+        max-width: 350px; /* Mas com um limite para não ficar gigante em telas maiores */
+        margin: 0 auto; /* Centraliza o card */
+    }
+
+    /* Ajusta a galeria de certificados */
+    .galeria-grid {
+        flex-direction: column; /* Empilha os itens da galeria */
+        gap: 15px;
+    }
+
+    .item-galeria {
+        width: 100%; /* Faz o item ocupar 100% da largura disponível */
+        max-width: 300px; /* Limita o tamanho */
+        margin: 0 auto;
+    }
+
+    .item-galeria img {
+        height: 150px; /* Ajusta a altura da imagem para celular */
+    }
+
+    /* Ajusta os botões de contato */
+    .links-contato {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .botao-contato {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.9em;
     }
 }
-
