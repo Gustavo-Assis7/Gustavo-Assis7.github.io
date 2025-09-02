@@ -159,3 +159,24 @@ footer {
     background-color: #004494;
     color: #ffffff; /* Garante que a cor do texto não mude no hover */
 }
+/* --- Estilos da Página Sobre Mim com Foto --- */
+.sobre-mim-container {
+    display: flex; /* A mágica do Flexbox de novo! */
+    align-items: flex-start; /* Alinha os itens no topo */
+    gap: 30px; /* Espaço entre a foto e o texto */
+}
+
+.coluna-imagem {
+    flex-basis: 250px; /* Define uma base de largura para a coluna da imagem */
+}
+
+.coluna-imagem img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura da sua coluna */
+    border-radius: 50%; /* O truque para deixar a imagem perfeitamente redonda! */
+    border: 5px solid #ffffff; /* Uma borda branca sutil */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.coluna-texto {
+    flex: 1; /* Faz a coluna de texto ocupar todo o espaço restante */
+}
