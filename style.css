@@ -58,3 +58,50 @@ footer {
     padding: 20px;
     width: 100%; /* Garante que o rodapé ocupe toda a largura */
 }
+/* --- Estilos da Seção de Projetos --- */
+#projetos {
+    padding-top: 40px; /* Um respiro acima do título da seção */
+    text-align: center;
+}
+
+.cards-de-projetos {
+    display: flex; /* Usando Flexbox de novo! */
+    justify-content: center; /* Centraliza os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a linha de baixo em telas pequenas */
+    gap: 30px; /* Um espaço bacana entre os cards */
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra um pouco mais forte para destacar */
+    padding: 25px;
+    width: 350px; /* Largura fixa para cada card */
+    text-align: left; /* Alinha o texto do card à esquerda */
+    transition: transform 0.3s ease; /* Uma animação suave para o hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Levanta o card um pouquinho quando o mouse passa por cima */
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    background-color: #004494; /* Um tom de azul mais escuro no hover */
+}
