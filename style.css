@@ -1,27 +1,33 @@
+/* --- Regra de Ouro: Box Sizing --- */
+* {
+    box-sizing: border-box;
+}
+
+/* O resto do seu código vem depois... */
 /* --- Reset Básico e Estilos Globais --- */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    margin: 0; /* Remove a margem padrão do navegador */
-    padding: 0; /* Remove o preenchimento padrão */
-    background-color: #f4f4f9; /* Um fundo cinza ainda mais sutil */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
     color: #333;
-    display: flex; /* ATIVA O FLEXBOX! */
-    flex-direction: column; /* Organiza os elementos filhos (header, main, footer) em uma coluna */
-    min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da tela */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* --- Estilos do Cabeçalho --- */
 header {
-    background-color: #ffffff; /* Fundo branco para o cabeçalho */
-    padding: 20px 40px; /* Mais preenchimento vertical e horizontal */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Uma sombra sutil para dar elevação */
+    background-color: #ffffff;
+    padding: 20px 40px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: center;
 }
 
 header h1 {
     margin: 0;
     color: #0056b3;
-    font-size: 2.5em; /* Aumenta o tamanho do nome */
+    font-size: 2.5em;
 }
 
 /* --- Estilos da Navegação / Menu --- */
@@ -29,7 +35,6 @@ nav {
     margin-top: 15px;
 }
 
-/* REGRA PARA TODOS OS LINKS NORMAIS */
 nav a {
     margin: 0 15px;
     color: #0056b3;
@@ -38,73 +43,60 @@ nav a {
     font-size: 1.1em;
 }
 
-/* REGRA PARA QUANDO O MOUSE PASSA POR CIMA */
 nav a:hover {
     text-decoration: underline;
 }
 
-/* REGRA APENAS PARA O LINK COM A CLASSE "ACTIVE" */
 nav a.active {
     color: #002b5c;
     border-bottom: 2px solid #0056b3;
     padding-bottom: 2px;
 }
 
-nav a {
-    margin: 0 15px; /* Espaçamento entre os links do menu */
-    color: #0056b3;
-    text-decoration: none; /* Remove o sublinhado dos links */
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-nav a:hover {
-    text-decoration: underline; /* Adiciona o sublinhado de volta quando o mouse passa por cima */
-}
-
 /* --- Estilos do Conteúdo Principal --- */
 main {
-    flex: 1; /* Faz o main crescer e ocupar todo o espaço disponível, empurrando o footer para baixo */
+    flex: 1;
     padding: 40px;
-    max-width: 900px; /* Define uma largura máxima para o conteúdo não ficar esticado demais em telas grandes */
-    margin: 20px auto; /* Centraliza o main na página */
+    max-width: 900px;
+    margin: 20px auto;
     width: 100%;
 }
 
 /* --- Estilos do Rodapé --- */
 footer {
-    background-color: #333; /* Rodapé escuro para contraste */
-    color: #fff; /* Texto branco */
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 20px;
-    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+    width: 100%;
 }
+
 /* --- Estilos da Seção de Projetos --- */
 #projetos {
-    padding-top: 40px; /* Um respiro acima do título da seção */
+    padding-top: 40px;
     text-align: center;
 }
 
 .cards-de-projetos {
-    display: flex; /* Usando Flexbox de novo! */
-    justify-content: center; /* Centraliza os cards */
-    flex-wrap: wrap; /* Permite que os cards quebrem para a linha de baixo em telas pequenas */
-    gap: 30px; /* Um espaço bacana entre os cards */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
     margin-top: 20px;
 }
 
 .card {
     background-color: #ffffff;
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra um pouco mais forte para destacar */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 25px;
-    width: 350px; /* Largura fixa para cada card */
-    text-align: left; /* Alinha o texto do card à esquerda */
-    transition: transform 0.3s ease; /* Uma animação suave para o hover */
+    width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Levanta o card um pouquinho quando o mouse passa por cima */
+    transform: translateY(-5px);
 }
 
 .card h3 {
@@ -124,44 +116,47 @@ footer {
 }
 
 .card a:hover {
-    background-color: #004494; /* Um tom de azul mais escuro no hover */
+    background-color: #004494;
 }
+
 /* --- Estilos da Página de Projeto Detalhada --- */
 .pagina-de-projeto {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+    text-align: left;
 }
 
 .pagina-de-projeto h3 {
-    margin-top: 30px; /* Espaço antes de cada subtítulo */
-    color: #004494; /* Um azul um pouco mais escuro para os subtítulos */
-    border-bottom: 2px solid #f0f2f5; /* Uma linha sutil para separar */
+    margin-top: 30px;
+    color: #004494;
+    border-bottom: 2px solid #f0f2f5;
     padding-bottom: 5px;
 }
 
-/* Estilizando a lista de tecnologias */
 .pagina-de-projeto ul {
-    list-style: none; /* Remove as bolinhas padrão da lista */
+    list-style: none;
     padding: 0;
 }
 
 .pagina-de-projeto li {
-    background-color: #f0f2f5; /* Um fundo sutil para cada item */
-    margin-bottom: 8px; /* Espaço entre os itens */
+    background-color: #f0f2f5;
+    margin-bottom: 8px;
     padding: 10px;
     border-radius: 5px;
 }
 
 .pagina-de-projeto li strong {
-    color: #0056b3; /* Cor para o nome da tecnologia */
+    color: #0056b3;
 }
+
 /* --- Estilos da Página de Contato --- */
 .links-contato {
-    margin-top: 30px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* Adicione esta linha */
 }
 
 .botao-contato {
@@ -178,29 +173,31 @@ footer {
 
 .botao-contato:hover {
     background-color: #004494;
-    color: #ffffff; /* Garante que a cor do texto não mude no hover */
+    color: #ffffff;
 }
+
 /* --- Estilos da Página Sobre Mim com Foto --- */
 .sobre-mim-container {
-    display: flex; /* A mágica do Flexbox de novo! */
-    align-items: flex-start; /* Alinha os itens no topo */
-    gap: 30px; /* Espaço entre a foto e o texto */
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
 }
 
 .coluna-imagem {
-    flex-basis: 250px; /* Define uma base de largura para a coluna da imagem */
+    flex-basis: 250px;
 }
 
 .coluna-imagem img {
-    width: 100%; /* Faz a imagem ocupar 100% da largura da sua coluna */
-    border-radius: 50%; /* O truque para deixar a imagem perfeitamente redonda! */
-    border: 5px solid #ffffff; /* Uma borda branca sutil */
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .coluna-texto {
-    flex: 1; /* Faz a coluna de texto ocupar todo o espaço restante */
+    flex: 1;
 }
+
 /* --- Estilos da Galeria de Certificados --- */
 .galeria-certificados {
     padding-top: 40px;
@@ -213,10 +210,10 @@ footer {
 }
 
 .galeria-grid {
-    display: flex; /* Transforma a grade em um container flexível */
-    justify-content: center; /* Centraliza os itens na horizontal */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
-    gap: 25px; /* Espaço entre cada item da galeria */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
     margin-top: 20px;
 }
 
@@ -225,11 +222,11 @@ footer {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 15px;
-    width: 300px; /* Largura fixa para cada item da galeria (você pode ajustar este valor) */
-    text-align: center; /* Centraliza o conteúdo dentro do item */
-    display: flex; /* Transforma o item também em flex para alinhar o conteúdo */
-    flex-direction: column; /* Coloca imagem e legenda em coluna */
-    justify-content: space-between; /* Empurra a legenda para baixo se houver espaço */
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition: transform 0.3s ease;
 }
 
@@ -238,9 +235,9 @@ footer {
 }
 
 .item-galeria img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do seu container */
-    height: 200px; /* ALTURA FIXA para TODAS as imagens! Isso fará com que fiquem homogêneas */
-    object-fit: cover; /* Recorta a imagem para preencher a altura e largura, mantendo proporção */
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -253,104 +250,81 @@ footer {
 
 /* --- Media Query para Responsividade --- */
 @media (max-width: 768px) {
-
-    /* Ajustes Globais para Mobile */
     body {
-        font-size: 0.9em; /* Diminui um pouco o tamanho base da fonte */
+        font-size: 0.9em;
     }
-
     header {
         padding: 15px 20px;
     }
-
     header h1 {
-        font-size: 1.8em; /* Diminui ainda mais o título principal para caber */
+        font-size: 1.8em;
     }
-
     nav {
-        flex-direction: column; /* Empilha os links do menu para vertical */
+        flex-direction: column;
         margin-top: 10px;
     }
-
     nav a {
-        margin: 5px 0; /* Espaçamento vertical entre os links */
+        margin: 5px 0;
         font-size: 0.9em;
-        display: block; /* Cada link ocupa sua própria linha */
+        display: block;
     }
-
     nav a.active {
-        border-bottom: none; /* Remove a linha de baixo para não poluir o menu empilhado */
+        border-bottom: none;
         color: #002b5c;
         font-weight: bold;
     }
-
-    /* Ajusta o padding geral do conteúdo */
     main {
-        padding: 15px; /* Reduz o padding geral do conteúdo */
-        margin: 10px auto; /* Reduz a margem superior/inferior */
+        padding: 15px;
+        margin: 10px auto;
     }
-
     h2 {
-        font-size: 1.8em; /* Ajusta o tamanho dos títulos H2 */
+        font-size: 1.8em;
     }
-
     h3 {
-        font-size: 1.2em; /* Ajusta o tamanho dos títulos H3 */
+        font-size: 1.2em;
     }
-
-    /* Empilha a foto e o texto na página "Sobre Mim" */
     .sobre-mim-container {
-        flex-direction: column; /* MUDA A DIREÇÃO DO FLEX PARA COLUNA! */
-        align-items: center; /* Centraliza a foto que agora está em cima */
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
-
     .coluna-texto {
-        text-align: left; /* Mantém o texto do parágrafo justificado à esquerda */
+        text-align: left;
     }
-
     .coluna-imagem {
-        margin-bottom: 20px; /* Adiciona um espaço abaixo da foto */
-        max-width: 150px; /* Limita o tamanho máximo da foto para celular */
+        margin-bottom: 20px;
+        max-width: 150px;
     }
-
-    /* Ajusta os cards de projeto */
     .cards-de-projetos {
-        flex-direction: column; /* Empilha os cards de projeto */
-        gap: 20px; /* Reduz o espaço entre eles */
+        flex-direction: column;
+        gap: 20px;
     }
-
     .card {
-        width: 100%; /* Faz o card ocupar 100% da largura disponível */
-        max-width: 350px; /* Mas com um limite para não ficar gigante em telas maiores */
-        margin: 0 auto; /* Centraliza o card */
-    }
-
-    /* Ajusta a galeria de certificados */
-    .galeria-grid {
-        flex-direction: column; /* Empilha os itens da galeria */
-        gap: 15px;
-    }
-
-    .item-galeria {
-        width: 100%; /* Faz o item ocupar 100% da largura disponível */
-        max-width: 300px; /* Limita o tamanho */
+        width: 100%;
+        max-width: 350px;
         margin: 0 auto;
     }
-
-    .item-galeria img {
-        height: 150px; /* Ajusta a altura da imagem para celular */
+    .galeria-grid {
+        flex-direction: column;
+        gap: 15px;
     }
-
-    /* Ajusta os botões de contato */
+    .item-galeria {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .item-galeria img {
+        height: 150px;
+    }
     .links-contato {
+        display: flex; /* Adicionado para permitir empilhamento */
         flex-direction: column;
         gap: 10px;
     }
-
     .botao-contato {
         width: 100%;
         padding: 12px 20px;
         font-size: 0.9em;
     }
 }
+
