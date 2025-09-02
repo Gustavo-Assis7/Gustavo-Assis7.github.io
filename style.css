@@ -105,3 +105,35 @@ footer {
 .card a:hover {
     background-color: #004494; /* Um tom de azul mais escuro no hover */
 }
+/* --- Estilos da Página de Projeto Detalhada --- */
+.pagina-de-projeto {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+
+.pagina-de-projeto h3 {
+    margin-top: 30px; /* Espaço antes de cada subtítulo */
+    color: #004494; /* Um azul um pouco mais escuro para os subtítulos */
+    border-bottom: 2px solid #f0f2f5; /* Uma linha sutil para separar */
+    padding-bottom: 5px;
+}
+
+/* Estilizando a lista de tecnologias */
+.pagina-de-projeto ul {
+    list-style: none; /* Remove as bolinhas padrão da lista */
+    padding: 0;
+}
+
+.pagina-de-projeto li {
+    background-color: #f0f2f5; /* Um fundo sutil para cada item */
+    margin-bottom: 8px; /* Espaço entre os itens */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.pagina-de-projeto li strong {
+    color: #0056b3; /* Cor para o nome da tecnologia */
+}
