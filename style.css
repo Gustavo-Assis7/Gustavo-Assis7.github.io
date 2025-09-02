@@ -250,3 +250,45 @@ footer {
     color: #555;
     margin-top: 10px;
 }
+
+/* --- Media Query para Responsividade --- */
+/* Estas regras SÓ serão aplicadas em telas com 768px de largura ou menos */
+
+@media (max-width: 768px) {
+    
+    /* Ajusta o cabeçalho para telas menores */
+    header {
+        padding: 15px 20px;
+    }
+
+    header h1 {
+        font-size: 2em; /* Diminui o título principal */
+    }
+
+    nav a {
+        margin: 0 8px; /* Diminui o espaço entre os links do menu */
+        font-size: 1em;
+    }
+
+    /* Empilha a foto e o texto na página "Sobre Mim" */
+    .sobre-mim-container {
+        flex-direction: column; /* MUDA A DIREÇÃO DO FLEX PARA COLUNA! */
+        align-items: center; /* Centraliza a foto que agora está em cima */
+        text-align: center;
+    }
+
+    .coluna-texto {
+        text-align: left; /* Mantém o texto do parágrafo justificado à esquerda */
+    }
+
+    .coluna-imagem {
+        margin-bottom: 20px; /* Adiciona um espaço abaixo da foto */
+        max-width: 200px; /* Limita o tamanho máximo da foto */
+    }
+
+    /* Ajusta o padding geral do conteúdo */
+    main {
+        padding: 20px;
+    }
+}
+
